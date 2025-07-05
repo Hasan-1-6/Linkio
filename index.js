@@ -16,13 +16,17 @@ app.use(express.json())
 app.use(cors());
 const port = process.env.PORT || 4000
 
-connectDB()
-.then(
-    app.listen(port, () => {
-    console.log(`Listening at port ${port}`)
-    // running at 3000 if env works correctly
-    }
-))
+// connectDB()
+// .then(
+//     app.listen(port, () => {
+//     console.log(`Listening at port ${port}`)
+//     // running at 3000 if env works correctly
+//     }
+// ))
+export default async function handler(req, res) {
+  await connectDB();
+  app(req, res); // This is all Vercel needs
+}
 
 //set path for serving static sites here
 app.use(express.static(path.join(__dirname, "public")));
