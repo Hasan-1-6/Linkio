@@ -10,7 +10,7 @@ async function handleSubmit(event){
     let fullUrl = event.target.elements.enteredUrl.value
     
     try{
-            returnedObj = await fetch('http://localhost:3000/sendFullUrl',{
+            returnedObj = await fetch('https://linkio-sable.vercel.app/sendFullUrl',{
             method : "POST",
             headers : {
                 "Content-Type": "application/json",
