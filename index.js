@@ -5,9 +5,8 @@ import express from 'express';
 import { handleGet, handlePost } from './controllers/controllers.js';
 import cors from 'cors'
 
-import path from "path";
-import { fileURLToPath } from "url";
-// recreate __dirname in ES modules
+import path from 'path';
+import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
