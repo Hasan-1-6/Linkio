@@ -25,8 +25,7 @@ const port = process.env.PORT || 4000
 // ))
 export default async function handler(req, res) {
   await connectDB()
-    .then(
-     app(req, res);)
+     app(req, res);
    // This is all Vercel needs
 }
 
